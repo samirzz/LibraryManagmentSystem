@@ -57,12 +57,12 @@ public class Librarian extends Person implements User {
         { //Pre-Registered => Readers
             Reader[] regReader = new Reader[6];
 
-            regReader[0] = new Reader(1, "111", "Adil", "Farooq", "Student", 242552525, "Faisalabad", "adil121@gmail.com", false);
-            regReader[1] = new Reader(2, "222", "Moeez", "Awaan", "Student", 242552525, "Punjab", "moeez_awaan@gmail.com", true);
-            regReader[2] = new Reader(3, "333", "Hamza", "Akhtar", "Child", 242552525, "Faisalabad", "hamzaakhtar23@gmail.com", true);
-            regReader[3] = new Reader(4, "444", "Yasir", "Khan", "Student", 242552525, "Mardan", "yasir_ales@gmail.com", true);
-            regReader[4] = new Reader(5, "555", "Khalid", "Sayed", "Student", 242552525, "Malakand", "khalid_insi@gmail.com", false);
-            regReader[5] = new Reader(6, "666", "Hassan", "Khan", "Student", 242552525, "Swabi", "hassan_sha@gmail.com", true);
+            regReader[0] = new Reader(1, "111", "samir", "bhandari", "Student", 242552525, "pasikot", "bhandari4@gmail.com", false);
+            regReader[1] = new Reader(2, "222", "manish", "kafle", "Teacher", 242552525, "mitrapark", "kafle2@gmail.com", true);
+            regReader[2] = new Reader(3, "333", "sita", "khanna", "Child", 242552525, "chabhil", "khanna1@gmail.com", true);
+            regReader[3] = new Reader(4, "444", "sashi", "Khan", "Student", 242552525, "lalitpur", "sashi@gmail.com", true);
+            regReader[4] = new Reader(5, "555", "rosy", "rai", "Student", 242552525, "patan", "rosyrai@gmail.com", false);
+            regReader[5] = new Reader(6, "666", "bipin", "karki", "Student", 242552525, "kalanki", "hasan5@gmail.com", true);
 
 
             for (int i = 0; i < regReader.length; i++) {
@@ -74,16 +74,16 @@ public class Librarian extends Person implements User {
         { //Pre-Registered => Books
             Book[] regBook = new Book[10];
 
-            regBook[0] = new Book(1, "Programming", 80.0f, "KamranHccp", "HCCP-Publishers");
-            regBook[1] = new Book(2, "English", 25.5f, "Haider", "KHA-Publishers");
-            regBook[2] = new Book(3, "Maths", 30.7f, "Aleesha", "KHA-Publishers");
-            regBook[3] = new Book(4, "History", 45.0f, "KamranHccp", "KHA-Publishers");
-            regBook[4] = new Book(5, "Science", 50.2f, "Haider", "KHA-Publishers");
-            regBook[5] = new Book(6, "Geography", 36.8f, "Aleesha", "KHA-Publishers");
-            regBook[6] = new Book(7, "Physics", 43.0f, "KamranHccp", "KHA-Publishers");
-            regBook[7] = new Book(8, "Psychology", 12.3f, "Aleesha", "KHA-Publishers");
-            regBook[8] = new Book(9, "Chemistry", 63.5f, "Haider", "KHA-Publishers");
-            regBook[9] = new Book(10, "Biology", 73.2f, "KamranHccp", "KHA-Publishers");
+            regBook[0] = new Book(1, "Programming", 80.0f, "samir", "HCCP-Publishers");
+            regBook[1] = new Book(2, "English", 25.5f, "manish", "KHA-Publishers");
+            regBook[2] = new Book(3, "Maths", 30.7f, "sita", "KHA-Publishers");
+            regBook[3] = new Book(4, "History", 45.0f, "sashi", "KHA-Publishers");
+            regBook[4] = new Book(5, "Science", 50.2f, "rosy", "KHA-Publishers");
+            regBook[5] = new Book(6, "Geography", 36.8f, "bipin", "KHA-Publishers");
+            regBook[6] = new Book(7, "Physics", 43.0f, "subitosh", "KHA-Publishers");
+            regBook[7] = new Book(8, "Psychology", 12.3f, "abhi", "KHA-Publishers");
+            regBook[8] = new Book(9, "Chemistry", 63.5f, "linkedin", "KHA-Publishers");
+            regBook[9] = new Book(10, "Biology", 73.2f, "sabi", "KHA-Publishers");
 
             for (int i = 0; i < regBook.length; i++) {
                 this.addBook(regBook[i]);
@@ -146,8 +146,8 @@ public class Librarian extends Person implements User {
         if (this.searchBook(book_id) != -1) {
             return book_list.get(book_id - 1).getName();
         } else {
-            System.out.println("ID not found");
-            return "Null";
+            String str="Id not found";
+            return str;
         }
     }
 
@@ -359,15 +359,16 @@ public class Librarian extends Person implements User {
     /////////////////
 
     /*
-    book_01 = (1, "Programming", 80.0f, "KamranHccp", "HCCP-Publishers");
-    regBook[1] = new Book(2, "English", 25.5f, "Haider", "KHA-Publishers");
-    regBook[2] = new Book(3, "Maths", 30.7f, "Aleesha", "KHA-Publishers");
-    regBook[3] = new Book(4, "History", 45.0f, "KamranHccp", "KHA-Publishers");
-    regBook[4] = new Book(5, "Science", 50.2f, "Haider", "KHA-Publishers");
-    regBook[5] = new Book(6, "Geography", 36.8f, "Aleesha", "KHA-Publishers");
-    regBook[6] = new Book(7, "Physics", 43.0f, "KamranHccp", "KHA-Publishers");
-    regBook[7] = new Book(8, "Psychology", 12.3f, "Aleesha", "KHA-Publishers");
-    regBook[8] = new Book(9, "Chemistry", 63.5f, "Haider", "KHA-Publishers");
-    regBook[9] = new Book(10, "Biology", 73.2f, "KamranHccp", "KHA-Publishers");
+   regBook[0] = new Book(1, "Programming", 80.0f, "samir", "HCCP-Publishers");
+            regBook[1] = new Book(2, "English", 25.5f, "manish", "KHA-Publishers");
+            regBook[2] = new Book(3, "Maths", 30.7f, "sita", "KHA-Publishers");
+            regBook[3] = new Book(4, "History", 45.0f, "sashi", "KHA-Publishers");
+            regBook[4] = new Book(5, "Science", 50.2f, "rosy", "KHA-Publishers");
+            regBook[5] = new Book(6, "Geography", 36.8f, "bipin", "KHA-Publishers");
+            regBook[6] = new Book(7, "Physics", 43.0f, "subitosh", "KHA-Publishers");
+            regBook[7] = new Book(8, "Psychology", 12.3f, "abhi", "KHA-Publishers");
+            regBook[8] = new Book(9, "Chemistry", 63.5f, "linkedin", "KHA-Publishers");
+            regBook[9] = new Book(10, "Biology", 73.2f, "sabi", "KHA-Publishers");
+
      */
 }
